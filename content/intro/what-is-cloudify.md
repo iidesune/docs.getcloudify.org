@@ -7,43 +7,43 @@ weight: 100
 
 ---
 
-Cloudify is an open source cloud orchestration framework. Cloudify allows you to model applications and services and automate their entire life cycle, including deployment on any cloud or data center environment, monitoring all aspects of the deployed application, detecting issues and failure, manually or automatically remediating them and handle on going maintenance tasks.
+Cloudify is an open source cloud orchestration framework that allows you to model applications and services and automate their entire life cycle on the cloud. It lets you deploy on any cloud or data center environment, monitoring all aspects of the deployed application. Failures and other issues are detected and remediated automatically, but manual intervention is always an option.  On-going maintenance tasks are automated, freeing your team for creative and productive activities.
 
 
 # Application Orchestration
 
 Your application in its entirety (Infrastructure, Middleware, Application Code, Scripts, Tool Configuration, Metrics and Logs) can be described in a Blueprint.
-Written in a human readable YAML format, a blueprint allows for high granularity of configuration of your application.
+Written in a human-readable YAML format, blueprints allow your applications to be configured in the high granularity for which they were intended.
 
-You can define the complete lifecycle of each part of your application in a blueprint. Cloudify can deploy your application and manage it by utilizing the tools of your choice.
+You can define the complete lifecycle of each part of your application in a blueprint. Cloudify  deploys and manages your applications using the tools you have chosen for each one of them.
 
-Cloudify will launch the compute instances, and configure network, storage and security in order to provide the required infrastrcuture resources to your application.
-Then, it will execute scripts (remotely via SSH or locally on the machines) or invoke configuration management tools to configure your servers and deploy your middleware and code.
+As Cloudify launches compute instances, it configures the network, storage and security infrastructure resources required by your application.
+Then it executes scripts or invokes configuration management tools that configure your servers and deploy your middleware and code. (Scripts are executed remotely via SSH or locally.)
 
 # Application Maintenance
 
 Cloudify’s custom workflows make it simple to change your application’s structure.
 
-Cloudify provides metrics and log collection capabilities to stream data to Cloudify so that you can act upon it.
+Cloudify provides metrics and log collection capabilities that stream actionable data to Cloudify.
 
-Data aggregation and visualization within Cloudify will allow you to execute the different workflows so that either you or Cloudify itself can make smart, actionable decisions based on business/application KPIs.
+Cloudify's built-in Data aggregation and visualization allow you to execute a variety of workflows through which either you or Cloudify make informed decisions, both tactical and strategic, based on key business or application performance indicators (KPIs).
 
-Those decisions can either manually or automatically trigger workflows (such as scaling or healing) on the tactical front; or as application behavior analysis on the strategic front.
+Those decisions, in turn, can be configured to enable optional manual triggering or automatic triggering of workflows. On the tactical front, these workflows might include scaling or healing. On the strategic front they may include application behavior analysis workflows, etc.
 
 
-# Pluggability
+# Cloudify Plug-ins
 
-Cloudify's plugins complete the framework.
+Cloudify plug-ins complete the framework.
 
-Cloudify-specific plugins can run scripts, CM tools, metrics and logs aggregators, or any other tool for that matter.
+Cloudify-specific plug-ins can run scripts, CM(??) tools, metrics and logs aggregators, or any other (??) tool for that matter.
 
-A plugin is an abstraction below which a tool is installed, configured and executed. Plugins are written in Python which makes them rather easy to write.
+A plug-in is an abstraction layer entity that installs, configures and executes a tool or script. Cloudify plug-ins are written in Python, making them coder-friendly.
 
-For example, Cloudify's [Script Plugin]({{< relref "plugins/script.md" >}}) allows you to execute scripts at different times throughout the application's lifecycle (creation, configuration, stable state, etc.)
+One Cloudify plug-in example is Cloudify's [Script Plug-in]({{< relref "plugins/script.md" >}}) that lets you map node life cycle operations and workflows to scripts that are included in your blueprint. 
 
-Another example would be the [Diamond plugin]({{< relref "plugins/diamond.md" >}}) which allows users to send back metrics after the application was deployed.
+Another Cloudify plug-in, the [Diamond plugin]({{< relref "plugins/diamond.md" >}}), collects system metrics and publishes them to multiple destinations.
 
-Users can write and deploy their own plugins and import them in their blueprints.
+Users can write and deploy their own plug-ins and incorporate them into their blueprints.
 
 # Standardization
 
@@ -52,7 +52,7 @@ Cloudify's DSL (Domain Specific Language) is based on [TOSCA](https://www.oasis-
 
 # Open-Source
 
-Cloudify comprises several open-source tools and our Python code which allows for easy composability.
+Cloudify includes several open-source tools and our Python code which makes coding for Cloudify very coder-friendly.
 
 The main open-source components behind Cloudify are:
 
